@@ -1,0 +1,29 @@
+# create three databases and three users/passwords
+# give root user password
+auth:
+  rootPassword: "password123"
+  usernames: [user,user,user]
+  passwords: [password,password,password]
+  databases: [authdb,accountdb,statisticsdb]
+
+# dont' use pvc
+persistence:
+  enabled: false
+
+# Security Contexts settings
+podSecurityContext:
+  fsGroup: ""
+  enabled: false
+
+containerSecurityContext:
+  runAsUser: 1001080001
+  enabled: false
+
+# Resources requests and limits
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: exchange-rate
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: exchange-rate.user1.apps.taikang1.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: exchange-rate
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix

@@ -4,4 +4,4 @@ metadata:
   name: statistics-service-config
 data:
   RATES_URL: >-
-    https://exchange-rate-will-piggymetrics.apps.shared-410.openshift.redhatworkshops.io/exchangerates
+    http://exchange-rate:8080/exchangerates
